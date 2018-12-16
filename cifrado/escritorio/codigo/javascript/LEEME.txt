@@ -1,0 +1,11 @@
+<script language="javascript">      
+    function recibir() 
+    { 
+        var valor = document.getElementById("texto").value; 
+        document.write(valor);         
+         
+    }         
+</script>
+
+
+OBTIENE VALOR DE UN INPUT

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CIFRADO CESAR</title>
+
+
+<script src="cifrado.js"></script>
+<script  src="descifrar.js"></script>
+
+
+  </head>
+  <body>
+
+
+<title>CIFRADO CESAR</title>
+
+<script  src="cifrado.js"></script>
+  </head>
+  <body>
+<table cellspacing=4 cellpadding=6 border=1 width=400 bgcolor=FFFFFF>
+<tr>
+    <td colspan="3" bgcolor="FFFFFF" align="center">
+      <h2>Texto Plano</h2>
+      <textarea type="text" id="textoPlano" cols="40" rows="1" onkeyup ="cifra(),cifraInverso(),ciframeGrupal();" /> </textarea>
+    </td>
+</tr>
+
+
+
+<tr>
+   <td width="50%">
+
+
+    <h2>Desplazamiento
+<input type="text"  size="15" maxlength="30"  id ="desplazamiento" onkeyup="cifra(),descifra()">
+</h2>
+<h2>Cifrado cesar
+<input type="text"  size="15" maxlength="30"  id ="textoCifrado" onkeyup="descifra();">
+</h2>
+</tr>
+
+
+
+<tr>
+   <td width="50%">
+
+
+    <h2>inverso
+<input type="text"  size="15" maxlength="30"  id ="inverso" onkeyup="cifraInverso();">
+</h2>
+
+</tr>
+
+
+<tr>
+   <td width="50%">
+    <h2>GRUPO 
+      <input type="text"  size="5" maxlength="30"  id ="grup" onkeyup="ciframeGrupal();">
+      TIA
+<input type="text"  size="15" maxlength="30"  id ="textoA">
+</h2>
+</tr>
+
+
+
+
+
+
+ 
+     <script language="javascript">  
+
+
+
+    function cifra() 
+    {  
+
+      var palabraPlano=document.getElementById("textoPlano").value;
+      var palabraCifrado=document.getElementById("textoCifrado").value;
+      var desplaz=document.getElementById("desplazamiento").value;
+      document.getElementById("textoCifrado").value=cifrarPalabra("",palabraPlano,"abcdefghijklmnopqrstuvwxyz",desplaz*1);
+
+     /* var valor = document.getElementById("nombre").value;
+          var clavee = document.getElementById("clave").value;
+          var valor2=EliminarCaracteresRaros(valor,"aábcdeéfghiíjklmnñoópqrstuúüvwxyz|#$","");
+       if(document.contenedor.gender[0].checked){
+        
+        var matriz=IngresarClaveAMatriz(undefined,EliminarEspacio(EliminarRepetidos(clavee," "),""));
+        matriz=ingresarAlfabetoAMatriz("aábcdeéfghiíjklmnñoópqrstuúüvwxyz|#$",matriz,0);
+        document.write("resultado : "+AgregarCaracteresRaros(valor,cifrar("",separarEnPares(new Array(0),tamanoImpar(valor2),0,0),matriz),
+          "aábcdeéfghiíjklmnñoópqrstuúüvwxyz|#$","",0));
+             }
+
+             else if(document.contenedor.gender[1].checked){
+                 var matriz=IngresarClaveAMatriz(undefined,EliminarEspacio(EliminarRepetidos(clavee," "),"")) ;
+                 matriz=ingresarAlfabetoAMatriz("aábcdeéfghiíjklmnñoópqrstuúüvwxyz|#$",matriz,0);
+                document.write("resultado: "+AgregarCaracteresRaros(valor,descifrar("",separarEnPares(new Array(0),tamanoImpar(valor2),0,0),matriz),
+          "aábcdeéfghiíjklmnñoópqrstuúüvwxyz|#$","",0));
+             }*/
+
+           }
+
+
+           function descifra(){
+       var palabraPlano=document.getElementById("textoPlano").value;
+      var palabraCifrado=document.getElementById("textoCifrado").value;
+      var desplaz=document.getElementById("desplazamiento").value;
+      document.getElementById("textoPlano").value=descifrarPalabra("",palabraCifrado,"abcdefghijklmnopqrstuvwxyz",desplaz*1);
+
+
+           }
+
+
+           function cifraInverso(){
+
+               var textPl=document.getElementById("textoPlano").value;
+               document.getElementById("inverso").value=cifrarInverso("",textPl);
+           }
+
+
+           function ciframeGrupal(){
+
+            var textoPlanito=document.getElementById("textoPlano").value;
+            var g=document.getElementById("grup").value;
+            console.log(g);
+            document.getElementById("textoA").value=cifrarGrupal(g,0," ",textoPlanito);
+           }
+      </script>
+          
+          
+        </body>
+      </html>
+      

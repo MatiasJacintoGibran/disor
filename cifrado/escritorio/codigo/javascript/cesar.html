@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>CIFRADO CESAR</title>
+
+<script  src="cifrado.js"></script>
+  </head>
+  <body>
+<table cellspacing="4" cellpadding="6" border="1" width=400 bgcolor=FFFFFF>
+<tr>
+    <td colspan="3" bgcolor="FFFFFF" align="center">
+      <h2>Texto Plano</h2>
+      <textarea type="text" id="texto" cols="40" rows="1" onkeyup ="Cesar();" /> </textarea>
+    </td>
+</tr>
+<tr>
+    <td width="50%">
+    <h2>Cifrado cesar</h2>
+    <h2>Desplazamiento</h2>
+    <input type="number" value="1" size="4" maxlength="3"  id ="desplazamiento" onkeyup ="Cesar();">
+    <h2>Resultado</h2>
+    <textarea type="text" id="textCifradoCesar" cols="30" rows="2" onkeyup ="" /> </textarea>
+    </td>
+    <td width="50%">
+     <h2>Transposición Inversa</h2>
+      <textarea type="text" id="transposicion" cols="30" rows="2"  /> </textarea>
+    </td>
+    <td width="50%">
+    <h2>TIG</h2>
+    <input type="number" value="1" size="15" maxlength="30"  id ="grupo" onchange="transposicionIG()">
+    <h2>Resultado</h2>
+    <textarea type="text" id="transGrupo" cols="30" rows="2"  /> </textarea>
+  </td>
+</tr>
+
+</table>
+
+<script language="javascript">
+
+
+    function Cesar(){
+    var despl=document.getElementByID("desplazamiento").value;
+    var textoPl=document.getElementByID("texto").value;
+     document.getElementByID("textCifradoCesar").value=cifrarPalabra("",textoPl,"abcdefghijklmnopqrstuvwxyz",despl*1);
+
+
+
+    }
+
+  
+      </script>
+               
+        </body>
+      </html>
+      

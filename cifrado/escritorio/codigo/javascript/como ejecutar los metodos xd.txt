@@ -1,0 +1,10 @@
+ 
+1.-var matriz=IngresarClaveAMatriz(undefined,EliminarEspacio(EliminarRepetidos("destino"," "),"")) 
+
+2.-matriz=ingresarAlfabetoAMatriz("aábcdeéfghiíjklmnñoópqrstuúüvwxyz|?¡",matriz,0)
+
+3.-recorrerMatriz("",matriz)
+
+
+4.-cifrar("",separarEnPares(new Array(0),tamanoImpar("holiwic"),0,0),matriz)
+5.-descifrar("",separarEnPares(new Array(0),tamanoImpar("ejüoeé"),0,0),matriz)
